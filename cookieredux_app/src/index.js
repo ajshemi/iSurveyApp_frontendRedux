@@ -9,14 +9,12 @@ import thunk from 'redux-thunk'
 
 import productReducer from './Redux/productReducer'
 import userReducer from './Redux/userReducer'
-import reviewReducer from './Redux/reviewReducer';
 import 'semantic-ui-css/semantic.min.css'
 
 const rootReducer = combineReducers(
     {
         products: productReducer,
-        user: userReducer,
-        owned_reviews:reviewReducer
+        user:userReducer
     }
 )
 

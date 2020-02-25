@@ -1,14 +1,21 @@
 import React from 'react';
-import Product from './Product';
-import ReviewForm from './ReviewForm'
+import Products from './Products'
 import {connect} from 'react-redux'
+// import CommentInput from './CommentInput'
+// import Comment from './Comment'
 
 
 const ProductContainer = (props) => {
-  console.log(props)
+  console.log("hello from product container")
+  console.log(props.products)
   return(
-    <div >
-      {props.products.map(product =>  <Product key={product.product_id} product={product}/>)}
+    <div>
+      <h1>All the Products!</h1>
+      <ul>
+        <Products products={props.products}/>
+        {/* <CommentInput user={props.user}/> */}
+        {/* <Comment user={props.user}/> */}
+      </ul>
     </div>
   )
 }
@@ -16,10 +23,9 @@ const ProductContainer = (props) => {
 
 
 const mapStateToProps = (state) => {
-  console.log(state)
   return {
-    products: state.products.products,
-    user: state.user.user
+    products: state.products.products
+    // user: state.user
   }
 }
 

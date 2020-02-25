@@ -1,44 +1,44 @@
-// export const fetchAndInitializeProducts = () => {
-
-//     return (dispatch, getState) => {
-//       fetch("http://localhost:3000/products")
-//       .then(r => r.json())
-//       .then((productsArr) => {
-//         console.log(productsArr)
-//         dispatch(initializeProducts(productsArr))
-//       })
-  
-//     }
-  
-//   }
-  
-  // THUNKY STUFF
-  
-  export const saveUserToState = (userInfo) => {
+  export const saveUserToState = (user) => {
     return {
       type: "SAVE_USER_TO_STATE",
-      userInfo
-    }
-  }
-  
-//   export const saveSnackToUserSnacks = (snack) => {
-//     return {
-//       type: "SAVE_SNACK_TO_USER",
-//       payload: snack
-//     }
-//   }
-  
-  export const updateRatingToState = (userInfo) => {
-    return {
-      type: "UPDATE_REVIEW_TO_STATE",
-      userInfo
+      user
     }
   }
   
   
-  export const initializeProducts = (products) => {
+  export const addProductsToState = (products) => {
     return {
-      type: "INITIALIZE_PRODUCTS",
+      type: "ADD_PRODUCTS",
       products
     }
   }
+
+
+  export const addCommentToState = (comment) => {
+    return {
+      type: "ADD_COMMENT",
+      comment
+    }
+  }
+
+  export const deleteCommentFromState=(comment) => {
+    return {
+      type:"DELETE_COMMENT",
+      comment
+    }
+    
+  }
+
+  export const updateRatingToState = (review) => {
+    return {
+      type: "UPDATE_USER_RATING",
+      review
+    }
+  }
+
+  // export const addReviewToState = (review) => {
+  //   return {
+  //     type: "ADD_REVIEW",
+  //     review
+  //   }
+  // }
